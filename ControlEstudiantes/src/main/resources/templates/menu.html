@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>Menu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+  </head>
+  <body>
+    <div class="container">
+      <div style="text-align: center">
+        <h3>MENU</h3>
+      </div>
+      <div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12">
+		<center>
+	<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Instrucciones</h5>
+      <!-- <small>3 days ago</small> -->
+    </div>
+    <p class="mb-1">Para exportar en los distintos formatos, solo debe elegir el formato deseado en el combobox y presionar el botón de exportar. Las columnas a exportarse se pueden elegir con el checkbox situado en la parte superior de cada columna.</p>
+  </a>
+</div>
+		</center>
+	</div>
+</div>
+      <div class="menu_content">
+        <div class="grid_container">
+          <div class="grid_element">
+            <form th:action="@{/estudiantes}" method="get">
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="../static/images/cajero.jpg" style="width:200px;" th:src="@{/images/estudiantes.jpg}" class="card-img img-responsive" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Operaciones Estudiantes</h5>
+                      <p class="card-text">Estudiantes</p>
+                    </div>
+                  </div>
+                </div>
+              </div> <button class="btn btn-secondary">Estudiantes</button>
+            </form>
+          </div>
+          <div class="grid_element">
+            <form th:action="@{/cursos}" method="get">
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="../static/images/che.jpg" style="width:200px;height:142px;" th:src="@{/images/cursos.png}" class="card-img img-responsive" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Operaciones Cursos</h5>
+                      <p class="card-text">Cursos</p>
+                    </div>
+                  </div>
+                </div>
+              </div><button class="btn btn-secondary">Cursos</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </body>
+
+  <style>
+    .grid_container {
+      display: grid;
+      grid-template-columns: auto auto;
+      width: 100vw;
+      height: 95vh;
+    }
+
+    .grid_element {
+      padding: 10px;
+      text-align: center;
+      align-self: center;
+    }
+
+    .container {
+      display: block;
+      height: 100vh;
+    }
+
+    .menu_content {
+      display: flex;
+    }
+
+  </style>
+
+</html>
