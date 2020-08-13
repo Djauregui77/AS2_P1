@@ -1,0 +1,9 @@
+package com.estudiantes.control.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.estudiantes.control.model.Course;
+
+public interface ICourseDAO extend JpaRepository<Course,String> {
+
+}
